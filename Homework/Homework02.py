@@ -62,7 +62,13 @@
 # else:
 #     print('X и Y должны быть не больше 1000 и натуральными числами')
     
-
+# эталонное решение:
+# x = int(input())
+# y = int(input())
+# for i in range(x):
+#     for j in range(y):
+#         if x == i + j and y == i * j:
+#             print(i, j)
 
 '''
 Задача 14: Требуется вывести все целые степени двойки (т.е. числа
@@ -70,15 +76,19 @@
 10 -> 1 2 4 8
 '''
 
-number = int (input('Введите число: '))
-degree = 0
-twoInDegree = 0
-while twoInDegree < number:
-    twoInDegree = 2**degree
-    degree += 1
-    if twoInDegree < number:
-      print(twoInDegree)
+# number = int (input('Введите число: '))
+# degree = 0
+# twoInDegree = 0
+# while twoInDegree < number:
+#     twoInDegree = 2**degree
+#     degree += 1
+#     if twoInDegree < number:
+#       print(twoInDegree)
 
-
-
+# эталонное решение:
+# number = int (input('Введите число: '))
+# degree = 0
+# while 2**degree <= number:
+#     print(2**degree)
+#     degree += 1    
     
