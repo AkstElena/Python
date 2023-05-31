@@ -132,9 +132,23 @@ result = 0
 if " " in word:
   print('Необходимо ввести только одно слово!')
 else:
-  for i in range(len(word)):
-      for k,v in alphabet.items():
-        if word[i] == k:
-              result = result + v
+  # for i in range(len(word)):
+  #     for k,v in alphabet.items():
+  #       if word[i] == k:
+  #             result = result + v
+  # print('Количество набранных очков: ', result)
+  for i in word:
+     if i in alphabet.keys():
+        result += alphabet[i]
   print('Количество набранных очков: ', result)
+  
+  '''Решение когда ключ очки'''
+  # dictonary = {1:'AEIO', 2:'DG'}
+  # world = input('Введите слово: ').upper()
+  # sum = 0
+  # for i in word:
+  #    for key,value in dictonary.items():
+  #       if i in value:
+  #          sum += key
+  # print(f'Стоимость слова: {sum}')
 
