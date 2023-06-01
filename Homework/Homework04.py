@@ -25,6 +25,27 @@
 # else:
 #     print('Введенное количество элементов не соответствует заданному значению!')
 
+'''Эталонное решение'''
+# mol = [int(x) for x in input().split()]
+# n = mol[0]
+# m = mol[1]
+# set_1 = set()
+# set_2 = set()
+# list_1 = list()
+
+# a = [int(x) for x in input().split()]
+# k = set(a)
+# for i in k:
+#     set_1.add(i)
+# b = [int(x) for x in input().split()]
+# k1 = set(b)
+# for i in k1:
+#     set_2.add(i)
+# lok = set_1 & set_2
+# kool = list(lok)
+# kool.sort()
+# for i in kool:
+#     print(i, end=' ')
 
 '''
 Задача 24: В фермерском хозяйстве в Карелии выращивают чернику. Она растет на
@@ -46,19 +67,32 @@
 
 
 '''Для закрепления понимания словаря'''
-from random import randint
-bushes = int(input('Введите количество кустов черники на грядке: '))
-bushes_with_berries = {}
-bush = 1
-while bush <= bushes:
-    bushes_with_berries[bush] = randint(0, 10)
-    bush += 1
-print(f'Урожайность кустов (куст: количество ягод): {bushes_with_berries}')
-bush = 2
-berries_max = 0
-while bush < bushes:
-    berries_summ = bushes_with_berries[bush] + bushes_with_berries[bush-1]+ bushes_with_berries[bush+1] 
-    if berries_summ > berries_max:
-        berries_max = berries_summ
-    bush += 1
-print(f'За один заход масимально можно собрать следующее количество ягод: {berries_max}')
+# from random import randint
+# bushes = int(input('Введите количество кустов черники на грядке: '))
+# bushes_with_berries = {}
+# bush = 1
+# while bush <= bushes:
+#     bushes_with_berries[bush] = randint(0, 10)
+#     bush += 1
+# print(f'Урожайность кустов (куст: количество ягод): {bushes_with_berries}')
+# bush = 2
+# berries_max = 0
+# while bush < bushes:
+#     berries_summ = bushes_with_berries[bush] + bushes_with_berries[bush-1]+ bushes_with_berries[bush+1] 
+#     if berries_summ > berries_max:
+#         berries_max = berries_summ
+#     bush += 1
+# print(f'За один заход масимально можно собрать следующее количество ягод: {berries_max}')
+
+'''Эталонное решение'''
+n = int(input())
+arr = list()
+for i in range(n):
+    x = int(input())
+    arr.append(x)
+
+arr_count = list()
+for i in range(len(arr)-1):
+    arr_count.append(arr[i-1]+arr[i]+arr[i+1])
+arr_count.append(arr[-2] + arr[-1] + arr[0])
+print(max(arr_count))
