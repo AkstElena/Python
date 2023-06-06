@@ -21,5 +21,12 @@ def prime_number(n: int) -> bool:
       return True
   return False 
 
+def frend_number(number):
+  sum = 1
+  for i in range(2, number // 2 + 1):
+      if number % i == 0:
+        sum += i
+  return sum
+
 
 
