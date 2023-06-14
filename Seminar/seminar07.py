@@ -14,18 +14,11 @@ transormed_values = list(map(transformation, values))
 
 '''
 
-# values = [1, 23, 42, 'asdfg']
+# values = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 'lkj']
+# print(values)
+# trasformation = lambda y: y
 # transformed_values = list(map(trasformation, values))
-# if values == transformed_values:
-#  print(‘ok’)
-# else:
-#  print(‘fail’)
-
-values = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 'lkj']
-print(values)
-trasformation = lambda y: y
-transformed_values = list(map(trasformation, values))
-print(transformed_values)
+# print(transformed_values)
 
 '''
 Задача №49
@@ -65,16 +58,16 @@ else:
 print(‘different’)
 '''
 
-# values = [0, 2, 10, 6] 
+values = [0, 2, 10, 6] 
 
-# def same_by(function,objects):
-#   for item in objects:
-#     if not function(item):
-#       return False
-#     return True
+def same_by(function,objects):
+  for item in objects:
+    if not function(item):
+      return False
+    return True
 
 
-# if same_by(lambda x: x % 2 == 0, values):
-#   print('same')
-# else:
-#   print('different')
+if same_by(lambda x: x % 2 == 0, values):
+  print('same')
+else:
+  print('different')
